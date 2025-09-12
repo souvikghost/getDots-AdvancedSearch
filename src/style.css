@@ -330,6 +330,17 @@ background-color: var(--color-border);
     padding: 10px;
 }
 
+.result__card--shimmer {
+    min-height: 70px;
+    width: 100%;
+    border-bottom: 2.5px solid var(--color-border);
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
 .result__card--imageSection {
     height: 45px;
     width: 45px;
@@ -368,7 +379,7 @@ background-color: var(--color-border);
     position: relative;
     height: 45px;
     width: 45px;
-}   
+}
 
 .imageSection__container {
     height: 100%;
@@ -380,6 +391,8 @@ background-color: var(--color-border);
     justify-content: center;
     overflow: hidden;
 }
+
+
 
 .profile__image {
     height: 100%;
@@ -410,7 +423,8 @@ background-color: var(--color-border);
 .status__away {
     background-color: yellow;
 }
-.filter__tab--popUpContainer{
+
+.filter__tab--popUpContainer {
     position: absolute;
     background-color: var(--color-bg);
     border: 1px solid var(--color-section-bg);
@@ -427,14 +441,16 @@ background-color: var(--color-border);
     min-width: 190px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.filter__tab--list{
+
+.filter__tab--list {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 0px;
 }
-.filter__tab--listLeftSection{
+
+.filter__tab--listLeftSection {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -442,58 +458,115 @@ background-color: var(--color-border);
 }
 
 .switch {
- --button-width: 1.8rem;
- --button-height: 1rem;
- --toggle-diameter: .8rem;
- --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
- --toggle-shadow-offset: 10px;
- --toggle-wider: 3rem;
- --color-grey: #C9CDCF;
- --color-black: #000000;
- cursor: pointer;
+    --button-width: 1.8rem;
+    --button-height: 1rem;
+    --toggle-diameter: .8rem;
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 3rem;
+    --color-grey: #C9CDCF;
+    --color-black: #000000;
+    cursor: pointer;
 }
 
 .slider {
- display: inline-block;
- width: var(--button-width);
- height: var(--button-height);
- background-color: var(--color-grey);
- border-radius: calc(var(--button-height) / 2);
- position: relative;
- transition: 0.3s all ease-in-out;
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
 }
 
 .slider::after {
- content: "";
- display: inline-block;
- width: var(--toggle-diameter);
- height: var(--toggle-diameter);
- background-color: #fff;
- border-radius: calc(var(--toggle-diameter) / 2);
- position: absolute;
- top: var(--button-toggle-offset);
- transform: translateX(var(--button-toggle-offset));
- box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
- transition: 0.3s all ease-in-out;
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #fff;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
 }
 
-.switch input[type="checkbox"]:checked + .slider {
- background-color: var(--color-black);
+.switch input[type="checkbox"]:checked+.slider {
+    background-color: var(--color-black);
 }
 
-.switch input[type="checkbox"]:checked + .slider::after {
- transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
- box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+.switch input[type="checkbox"]:checked+.slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
 }
 
 .switch input[type="checkbox"] {
- display: none;
+    display: none;
 }
 
-.switch input[type="checkbox"]:active + .slider::after {
- width: var(--toggle-wider);
+.switch input[type="checkbox"]:active+.slider::after {
+    width: var(--toggle-wider);
 }
 
-.switch input[type="checkbox"]:checked:active + .slider::after {
- transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+.switch input[type="checkbox"]:checked:active+.slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+}
+
+
+.result__card--shimmer {
+
+    min-height: 70px;
+    width: 100%;
+    border-bottom: 2.5px solid var(--color-border);
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Shimmer effect */
+.imageSection__container--shimmer {
+    height: 45px;
+    width: 45px;
+    max-height: 45px;
+    max-width: 45px;
+    border-radius: var(--border-radius-primary);
+    background: linear-gradient(-45deg, #e0dfdf 40%, #efeeee 50%, #e0dfdf 60%);
+    background-size: 300%;
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+}
+.heading-shimmer{
+    height: 15px;
+    width: 40%;
+    border-radius: var(--border-radius-primary);
+    background: linear-gradient(-45deg, #e0dfdf 40%, #efeeee 50%, #e0dfdf 60%);
+    background-size: 300%;
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite linear;
+}
+
+.subHeading-shimmer{
+    height: 15px;
+    width: 80%;
+    border-radius: var(--border-radius-primary);
+    background: linear-gradient(-45deg, #e0dfdf 40%, #efeeee 50%, #e0dfdf 60%);
+    background-size: 300%;
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite linear;
+
+}
+
+/* Wave animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }

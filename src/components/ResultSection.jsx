@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { svgPacket } from "../../svgPacket";
 import ResultCard from "./ResultCard";
 import { filterData } from "../utils/filterData";
 import { AnimatePresence, motion } from "framer-motion";
 import { filterPopUpChildConfig, filterPopUpContainerConfig } from "../utils/motionConfig.js";
+import { useOutsideClick } from "../hooks/useOutsideClick.js";
+import ShimmerCard from "./ShimmerCard.jsx";
 
 const ResultSection = () => {
   const [filterPopUpIsOpen, setFilterPopUpIsOpen] = useState(false);
+  const filterPopUpContainerRef = useRef(null);
+
+  useOutsideClick({ ref: filterPopUpContainerRef, cb: () => setFilterPopUpIsOpen(false) });
 
   return (
     <div className="result__container">
@@ -45,7 +50,7 @@ const ResultSection = () => {
         </AnimatePresence>
         <AnimatePresence>
           {filterPopUpIsOpen && (
-            <motion.div style={{ transformOrigin: "top" }} initial="close" animate={filterPopUpIsOpen ? "open" : "close"} exit="close" variants={filterPopUpContainerConfig} className="filter__tab--popUpContainer">
+            <motion.div ref={filterPopUpContainerRef} style={{ transformOrigin: "top" }} initial="close" animate={filterPopUpIsOpen ? "open" : "close"} exit="close" variants={filterPopUpContainerConfig} className="filter__tab--popUpContainer">
               {Object.values(filterData).map((item) => {
                 return (
                   <motion.div variants={filterPopUpChildConfig} className="filter__tab--list" key={item.id}>
@@ -69,8 +74,9 @@ const ResultSection = () => {
 
       {/* result cards */}
       <div className="result__card--container">
-        <ResultCard type={"person"} />
-        <ResultCard type={"files"} />
+        {/* <ResultCard type={"person"} /> */}
+        {/* <ResultCard type={"files"} /> */}
+        <ShimmerCard/>
       </div>
     </div>
   );
