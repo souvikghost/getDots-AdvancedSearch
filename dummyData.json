@@ -1,0 +1,106 @@
+{
+  "suggestions": [
+    {
+      "id": 1,
+      "type": "person",
+      "name": "Randall Johnsson",
+      "category": "People",
+      "status": "active",
+      "lastActive": "now",
+      "avatar": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg"
+    },
+    {
+      "id": 2,
+      "type": "folder",
+      "name": "Random Michal Folder",
+      "category": "Photos",
+      "edited": "12m ago",
+      "fileCount": 12
+    },
+    {
+      "id": 3,
+      "type": "file",
+      "name": "crative_file_frandkies.jpg",
+      "category": "Photos/Assets",
+      "edited": "12m ago",
+      "fileType": "image"
+    },
+    {
+      "id": 4,
+      "type": "person",
+      "name": "Kristinge Karand",
+      "category": "People",
+      "status": "active",
+      "lastActive": "2d ago",
+      "avatar": "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg"
+    },
+    {
+      "id": 5,
+      "type": "file",
+      "name": "files_krande_michelle.avi",
+      "category": "Videos",
+      "added": "12m ago",
+      "fileType": "video"
+    },
+    {
+      "id": 6,
+      "type": "person",
+      "name": "Caroline Dribsson",
+      "category": "People",
+      "status": "inactive",
+      "lastActive": "unactivated",
+      "avatar": "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg"
+    },
+    {
+      "id": 7,
+      "type": "person",
+      "name": "Adam Cadribean",
+      "category": "People",
+      "status": "active",
+      "lastActive": "1w ago",
+      "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg"
+    },
+    {
+      "id": 8,
+      "type": "file",
+      "name": "final_dribbble_presentation.jpg",
+      "category": "Presentations",
+      "edited": "1w ago",
+      "fileType": "image"
+    },
+    {
+      "id": 9,
+      "type": "person",
+      "name": "Margareth Cendrbgssen",
+      "category": "People",
+      "status": "active",
+      "lastActive": "1w ago",
+      "avatar": "https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg"
+    },
+    {
+      "id": 10,
+      "type": "file",
+      "name": "dribbble_animation.avi",
+      "category": "Videos",
+      "added": "1y ago",
+      "fileType": "video"
+    },
+    {
+      "id": 11,
+      "type": "folder",
+      "name": "Dribbble Folder",
+      "category": "Projects",
+      "edited": "2m ago",
+      "fileCount": 12
+    },
+    {
+      "id": 12,
+      "type": "person",
+      "name": "Souvik Ghosh",
+      "category": "People",
+      "status": "active",
+      "lastActive": "Online",
+      "avatar": "https://avatars.githubusercontent.com/u/145422565?v=4"
+    }
+  ]
+}

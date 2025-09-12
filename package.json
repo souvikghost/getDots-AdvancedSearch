@@ -1,0 +1,20 @@
+{
+  "name": "getdots",
+  "version": "1.0.0",
+  "description": "advanced search functionality",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Souvik Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "framer-motion": "^12.23.12",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
