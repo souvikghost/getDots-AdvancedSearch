@@ -14,15 +14,16 @@
       "type": "folder",
       "name": "Random Michal Folder",
       "category": "Photos",
-      "edited": "12m ago",
-      "fileCount": 12
+      "edited": "Added 12m ago",
+      "fileCount": 12,
+      "fileType": "folder"
     },
     {
       "id": 3,
       "type": "file",
       "name": "crative_file_frandkies.jpg",
       "category": "Photos/Assets",
-      "edited": "12m ago",
+      "edited": "Edited 12m ago",
       "fileType": "image"
     },
     {
@@ -30,7 +31,7 @@
       "type": "person",
       "name": "Kristinge Karand",
       "category": "People",
-      "status": "active",
+      "status": "away",
       "lastActive": "2d ago",
       "avatar": "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg"
     },
@@ -39,7 +40,7 @@
       "type": "file",
       "name": "files_krande_michelle.avi",
       "category": "Videos",
-      "added": "12m ago",
+      "edited": "Edited 12m ago",
       "fileType": "video"
     },
     {
@@ -48,7 +49,7 @@
       "name": "Caroline Dribsson",
       "category": "People",
       "status": "inactive",
-      "lastActive": "unactivated",
+      "lastActive": "Unactivated",
       "avatar": "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg"
     },
     {
@@ -56,7 +57,7 @@
       "type": "person",
       "name": "Adam Cadribean",
       "category": "People",
-      "status": "active",
+      "status": "away",
       "lastActive": "1w ago",
       "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg"
     },
@@ -65,7 +66,7 @@
       "type": "file",
       "name": "final_dribbble_presentation.jpg",
       "category": "Presentations",
-      "edited": "1w ago",
+      "edited": "Edited 1w ago",
       "fileType": "image"
     },
     {
@@ -73,7 +74,7 @@
       "type": "person",
       "name": "Margareth Cendrbgssen",
       "category": "People",
-      "status": "active",
+      "status": "away",
       "lastActive": "1w ago",
       "avatar": "https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg"
     },
@@ -82,7 +83,7 @@
       "type": "file",
       "name": "dribbble_animation.avi",
       "category": "Videos",
-      "added": "1y ago",
+      "edited": "Added 1y ago",
       "fileType": "video"
     },
     {
@@ -90,8 +91,9 @@
       "type": "folder",
       "name": "Dribbble Folder",
       "category": "Projects",
-      "edited": "2m ago",
-      "fileCount": 12
+      "edited": "Added 2m ago",
+      "fileCount": 12,
+      "fileType": "folder"
     },
     {
       "id": 12,
@@ -99,7 +101,7 @@
       "name": "Souvik Ghosh",
       "category": "People",
       "status": "active",
-      "lastActive": "Online",
+      "lastActive": "now",
       "avatar": "https://avatars.githubusercontent.com/u/145422565?v=4"
     }
   ]

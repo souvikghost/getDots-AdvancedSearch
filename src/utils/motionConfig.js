@@ -9,10 +9,10 @@ export const SearchBoxConfig = {
     },
   },
   close: {
-    // height: "70px",
-    // width: "500px",
-    height: "500px",
+    height: "70px",
     width: "500px",
+    // height: "500px",
+    // width: "500px",
     transition: {
       type: "spring",
       stiffness: 100,
@@ -53,4 +53,21 @@ export const filterPopUpChildConfig = {
     y: -10,
     transition: { duration: 0.2 },
   },
+};
+
+
+
+export const resultCardContainerConfig = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, 
+    },
+  },
+};
+
+export const resultCardChildContainerConfig = {
+  hidden: { opacity: 0, x: -15 },
+  show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 80 } },
 };

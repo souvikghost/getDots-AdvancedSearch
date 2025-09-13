@@ -3,11 +3,11 @@ import { svgPacket } from "../../svgPacket";
 import ResultCard from "./ResultCard";
 import { filterData } from "../utils/filterData";
 import { AnimatePresence, motion } from "framer-motion";
-import { filterPopUpChildConfig, filterPopUpContainerConfig } from "../utils/motionConfig.js";
+import { filterPopUpChildConfig, filterPopUpContainerConfig, resultCardContainerConfig } from "../utils/motionConfig.js";
 import { useOutsideClick } from "../hooks/useOutsideClick.js";
 import ShimmerCard from "./ShimmerCard.jsx";
 
-const ResultSection = () => {
+const ResultSection = ({ data, isFetchDataLoading }) => {
   const [filterPopUpIsOpen, setFilterPopUpIsOpen] = useState(false);
   const filterPopUpContainerRef = useRef(null);
 
@@ -73,11 +73,28 @@ const ResultSection = () => {
       </div>
 
       {/* result cards */}
-      <div className="result__card--container">
-        {/* <ResultCard type={"person"} /> */}
-        {/* <ResultCard type={"files"} /> */}
-        <ShimmerCard/>
-      </div>
+      <motion.div variants={resultCardContainerConfig} initial="hidden" animate="show" id="style-4" className="result__card--container">
+        {isFetchDataLoading ? (
+          <div className="shimmer__card--container">
+            {Array.from({ length: 6 }).map((_, index) => {
+              return <ShimmerCard key={index}/>;
+            })}
+          </div>
+        ) : (
+          data?.length > 0 &&
+          data.map((item) => {
+            return <ResultCard key={item.id} type={item?.type} data={item} />;
+          })
+        )}
+
+        {/*  <div className="shimmer__card--container">
+            {Array.from({length:6}).map((_,index)=>{
+              return(
+                <ShimmerCard/>
+              )
+            })}
+          </div> */}
+      </motion.div>
     </div>
   );
 };
