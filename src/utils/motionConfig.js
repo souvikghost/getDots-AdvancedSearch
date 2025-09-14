@@ -55,19 +55,20 @@ export const filterPopUpChildConfig = {
   },
 };
 
-
-
 export const resultCardContainerConfig = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3, 
-    },
-  },
+  show: { opacity: 1 },
 };
 
 export const resultCardChildContainerConfig = {
   hidden: { opacity: 0, x: -15 },
-  show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 80 } },
+  show: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.35,
+      ease: [0.25, 0.8, 0.25, 1],
+    },
+  }),
 };

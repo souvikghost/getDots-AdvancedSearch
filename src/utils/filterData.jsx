@@ -1,11 +1,21 @@
 import { svgPacket } from "../../svgPacket";
 
 export const filterData = {
+  all: {
+    id: "all",
+    name: "All",
+    value: "all",
+    isSelected: true,
+    isHighlighted: true,
+    count: 0,
+    icon: "",
+  },
   files: {
     id: "files",
     name: "Files",
     value: "files",
-    isSelected: false,
+    isSelected: true,
+    isHighlighted: false,
     count: 0,
     icon: svgPacket["attachFileIcon"],
   },
@@ -13,7 +23,8 @@ export const filterData = {
     id: "people",
     name: "People",
     value: "people",
-    isSelected: false,
+    isSelected: true,
+    isHighlighted: false,
     count: 0,
     icon: svgPacket["peopleIcon"],
   },
@@ -22,6 +33,7 @@ export const filterData = {
     name: "Chats",
     value: "chats",
     isSelected: false,
+    isHighlighted: false,
     count: 0,
     icon: svgPacket["messageIcon"],
   },
@@ -30,6 +42,7 @@ export const filterData = {
     name: "Lists",
     value: "lists",
     isSelected: false,
+    isHighlighted: false,
     count: 0,
     icon: svgPacket["listIcon"],
   },

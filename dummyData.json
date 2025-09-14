@@ -3,11 +3,12 @@
     {
       "id": 1,
       "type": "person",
-      "name": "Randall Johnsson",
+      "name": "Souvik Ghosh",
       "category": "People",
       "status": "active",
       "lastActive": "now",
-      "avatar": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg"
+      "keywords":["all","people","chats"],
+      "avatar": "https://avatars.githubusercontent.com/u/145422565?v=4"
     },
     {
       "id": 2,
@@ -15,15 +16,17 @@
       "name": "Random Michal Folder",
       "category": "Photos",
       "edited": "Added 12m ago",
+      "keywords":["all","files","lists"],
       "fileCount": 12,
       "fileType": "folder"
     },
     {
       "id": 3,
       "type": "file",
-      "name": "crative_file_frandkies.jpg",
+      "name": "creative_file_frandkies.jpg",
       "category": "Photos/Assets",
       "edited": "Edited 12m ago",
+      "keywords":["all","files"],
       "fileType": "image"
     },
     {
@@ -33,6 +36,7 @@
       "category": "People",
       "status": "away",
       "lastActive": "2d ago",
+      "keywords":["all","people","chats"],
       "avatar": "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg"
     },
     {
@@ -41,6 +45,7 @@
       "name": "files_krande_michelle.avi",
       "category": "Videos",
       "edited": "Edited 12m ago",
+      "keywords":["all","files"],
       "fileType": "video"
     },
     {
@@ -50,6 +55,7 @@
       "category": "People",
       "status": "inactive",
       "lastActive": "Unactivated",
+      "keywords":["all","people","chats"],
       "avatar": "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg"
     },
     {
@@ -59,6 +65,7 @@
       "category": "People",
       "status": "away",
       "lastActive": "1w ago",
+      "keywords":["all","people","chats"],
       "avatar": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg"
     },
     {
@@ -67,6 +74,7 @@
       "name": "final_dribbble_presentation.jpg",
       "category": "Presentations",
       "edited": "Edited 1w ago",
+      "keywords":["all","files"],
       "fileType": "image"
     },
     {
@@ -76,6 +84,7 @@
       "category": "People",
       "status": "away",
       "lastActive": "1w ago",
+      "keywords":["all","people","chats"],
       "avatar": "https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg"
     },
     {
@@ -84,6 +93,7 @@
       "name": "dribbble_animation.avi",
       "category": "Videos",
       "edited": "Added 1y ago",
+      "keywords":["all","files"],
       "fileType": "video"
     },
     {
@@ -93,16 +103,20 @@
       "category": "Projects",
       "edited": "Added 2m ago",
       "fileCount": 12,
+      "keywords":["all","files","lists"],
       "fileType": "folder"
     },
     {
+      
+
       "id": 12,
       "type": "person",
-      "name": "Souvik Ghosh",
+      "name": "Randall Johnsson",
       "category": "People",
       "status": "active",
       "lastActive": "now",
-      "avatar": "https://avatars.githubusercontent.com/u/145422565?v=4"
+      "keywords":["all","people","chats"],
+      "avatar": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg"
     }
   ]
 }
