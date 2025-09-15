@@ -15,7 +15,7 @@ const SearchBox = () => {
   const [dataSet, setDataSet] = useState([]);
   const [dataSetAfterFilter, setDataSetAfterFilter] = useState([]);
   const [filterTab, setFilterTab] = useState(filterData);
-  const [copyAfterSearchedData,setCopyAfterSearchedData]=useState([])
+  const [copyAfterSearchedData, setCopyAfterSearchedData] = useState([]);
 
   // ---- Applied Debounce here
   const debouncedSearchValue = useDebounce(inputSearchValue, 300);
@@ -25,23 +25,28 @@ const SearchBox = () => {
     setIsLoading(true);
     setIsFetchDataLoading(true);
 
-    setIsOpen(dataSet?.length > 0);
     let filtered = dataSet;
+    setIsOpen(filtered?.length > 0);
+    console.log(filtered?.length);
 
     // apply search if exists
     if (debouncedSearchValue) {
       await new Promise((resolve) => {
         // Simulating API kind of response to show the Loader & Shimmer UI
         setTimeout(() => {
-          filtered = dataSet.filter((item) => item?.name?.toLowerCase()?.includes(debouncedSearchValue?.toLowerCase())), 
-          setDataSetAfterFilter(filtered);
-          setCopyAfterSearchedData(filtered);
+          filtered = dataSet.filter((item) => item?.name?.toLowerCase()?.includes(debouncedSearchValue?.toLowerCase()));
+          if(filtered?.length>0){
+            setDataSetAfterFilter(filtered);
+            setCopyAfterSearchedData(filtered);
+          }else{
+            handleAllClear()
+          }
 
           resolve(filtered);
         }, 1500);
       });
     }
-    
+
     if (filtered?.length > 0) {
       handleDataCount(filtered);
     }
@@ -50,8 +55,21 @@ const SearchBox = () => {
     setIsFetchDataLoading(false);
   };
 
-  console.log(dataSetAfterFilter);
-  
+  const handleAllClear = () => {
+    setDataSetAfterFilter([]);
+    setCopyAfterSearchedData([]);
+
+    setFilterTab((prev) =>
+      Object.keys(prev).reduce((acc, key) => {
+        acc[key] = {
+          ...prev[key],
+          count: 0, 
+          isHighlighted: key === "all", 
+        };
+        return acc;
+      }, {})
+    );
+  };
 
   // --- For Tabs like -> All/Chats/People
   const handleFilterDataBasedOnWhichTabIsActive = async () => {
@@ -139,6 +157,7 @@ const SearchBox = () => {
     } else {
       setDataSetAfterFilter(dummyData.suggestions);
       setIsOpen(false);
+      handleAllClear();
     }
   }, [debouncedSearchValue]);
 

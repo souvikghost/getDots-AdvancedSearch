@@ -86,10 +86,12 @@ const ResultSection = ({ data, isFetchDataLoading, debouncedSearchValue, filterD
             })}
           </div>
         ) : (
-          data?.length > 0 &&
+          data?.length > 0 ?
           data.map((item,i) => {
             return <ResultCard key={item.id} type={item?.type} data={item} searchQuery={debouncedSearchValue} index={i} />;
-          })
+          }) : (<div className="noDataFound__container">
+            <span>No data found!</span>
+          </div>)
         )}
       </motion.div>
     </div>

@@ -260,6 +260,16 @@ background-color: var(--color-border);
 input:focus::placeholder {
   color: transparent; 
 }
+.noDataFound__container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-section-bg);
+}
 
 .filter__tab--button {
     background-color: inherit;
